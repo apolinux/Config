@@ -82,6 +82,7 @@ class Config implements ArrayAccess
                 static::arraySet($instance->container, $innerKey, $innerValue);
             }
         } else {
+            static::$instance->offsetGet($key);
             static::arraySet($instance->container, $key, $value);
         }
     }
